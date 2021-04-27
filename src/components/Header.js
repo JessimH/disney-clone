@@ -191,9 +191,9 @@ const NavMenu = styled.div`
         }
     }
 
-    /*@media (max-width: 768px) {
+    @media (max-width: 768px) {
         display: none;
-    }*/
+    }
 `
 
 const Login = styled.a`
@@ -251,7 +251,12 @@ const SignOut = styled.div`
     &:hover{
         ${DropDown}{
             opacity: 1;
-            transition-duration: 1s;
+            transition-duration: .5s;
+
+            &:hover{
+                color: red;
+                transition-duration: .2s;
+            }
         }
     }
 `
