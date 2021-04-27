@@ -1,6 +1,10 @@
 import styled from 'styled-components'
+import { auth } from 'firebase'
 
 const Header = (props) => {
+    const handleAuth = () => {
+        auth.signInWithPopup()
+    }
     return <Nav>
         <Logo>
             <img src="images/logo.svg" alt="Disney +" />
@@ -143,6 +147,7 @@ const Login = styled.a`
         cursor: pointer;
         background-color: #f9F9F9;
         color: #000;
+        border-color: transparent;
     }
 `
 
