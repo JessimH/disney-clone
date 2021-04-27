@@ -3,11 +3,14 @@ import { auth, provider } from '../firebase'
 
 const Header = (props) => {
     const handleAuth = () => {
-        auth.signInWithPopup(provider).then((result) => {
-            console.log(result)
-        }).catch((error) => {
-            alert(error.message)
-        })
+        auth
+            .signInWithPopup(provider)
+            .then((result) => {
+                console.log(result)
+            })
+            .catch((error) => {
+                alert(error.message)
+            })
     }
     return <Nav>
         <Logo>
