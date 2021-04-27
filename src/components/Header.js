@@ -10,6 +10,26 @@ const Header = (props) => {
                 <img src="images/home-icon.svg" alt="Home" />
                 <span>HOME</span>
             </a>
+            <a href="/home">
+                <img src="images/search-icon.svg" alt="Home" />
+                <span>SEARCH</span>
+            </a>
+            <a href="/home">
+                <img src="images/watchlist-icon.svg" alt="Home" />
+                <span>WATCHLIST</span>
+            </a>
+            <a href="/home">
+                <img src="images/original-icon.svg" alt="Home" />
+                <span>ORIGINALS</span>
+            </a>
+            <a href="/home">
+                <img src="images/movie-icon.svg" alt="Home" />
+                <span>MOVIES</span>
+            </a>
+            <a href="/home">
+                <img src="images/series-icon.svg" alt="Home" />
+                <span>SERIES</span>
+            </a>
         </NavMenu>
     </Nav>
 }
@@ -73,6 +93,7 @@ const NavMenu = styled.div`
             letter-spacing: 1.42px;
             line-height: 1.08;
             padding: 2px 0;
+            margin-left: 5px;
             white-space: nowrap;
             position: relative;
 
