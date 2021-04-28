@@ -12,7 +12,7 @@ const NewDisney = (props) => {
                 {
                     movies && movies.map((movie, key) => (
                         <Wrap Wrap key={key} >
-                            <Link to={'/detail/' + movie.id} >
+                            <Link to={'/details/' + movie.id} >
                                 <img src={movie.cardImg} alt={movie.title} />
                             </Link>
                         </Wrap>
