@@ -21,8 +21,9 @@ const Home = (props) => {
     let trendings = []
 
     useEffect(() => {
-        db.collection('movies').onSnapshot((snapchot) => {
-            snapchot.docs.map((doc) => {
+        db.collection('movies').onSnapshot((snapshot) => {
+            snapshot.docs.map((doc) => {
+                console.log(recommends)
                 switch (doc.data().type) {
                     case 'recommend':
                         recommends = [...recommends, { id: doc.id, ...doc.data() }]
