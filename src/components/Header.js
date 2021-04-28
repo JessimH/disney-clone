@@ -252,11 +252,6 @@ const SignOut = styled.div`
         ${DropDown}{
             opacity: 1;
             transition-duration: .5s;
-
-            &:hover{
-                color: red;
-                transition-duration: .2s;
-            }
         }
     }
 `
