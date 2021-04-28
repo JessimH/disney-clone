@@ -25,28 +25,18 @@ const Home = (props) => {
             snapchot.docs.map((doc) => {
                 switch (doc.data().type) {
                     case 'recommend':
-                        recommends.push({
-                            id: doc.id,
-                            ...doc.data()
-                        })
+                        recommends = [...recommends, { id: doc.id, ...doc.data() }]
                         break
                     case 'new':
-                        newDisneys.push({
-                            id: doc.id,
-                            ...doc.data()
-                        })
+                        newDisneys = [...newDisneys, { id: doc.id, ...doc.data() }]
                         break
                     case 'original':
-                        originals.push({
-                            id: doc.id,
-                            ...doc.data()
-                        })
+                        originals = [...originals, { id: doc.id, ...doc.data() }]
                         break
                     case 'trending':
-                        trendings.push({
-                            id: doc.id,
-                            ...doc.data()
-                        })
+                        trendings = [...trendings, { id: doc.id, ...doc.data() }]
+                        break
+                    default:
                         break
                 }
             })
@@ -62,18 +52,16 @@ const Home = (props) => {
         )
     }, [userName])
 
-}
-
-return (
-    <Container>
-        <ImgSlider />
-        <Viewers />
-        <Recommends />
-        <NewDisney />
-        <Originals />
-        <Trending />
-    </Container>
-)
+    return (
+        <Container>
+            <ImgSlider />
+            <Viewers />
+            <Recommends />
+            <NewDisney />
+            <Originals />
+            <Trending />
+        </Container>
+    )
 }
 
 const Container = styled.main`
