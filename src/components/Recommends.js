@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
-import { selectRecommend, setMovies } from '../features/movie/movieSlice'
+import { selectRecommend } from '../features/movie/movieSlice'
 
 const Recommends = (props) => {
     const movies = useSelector(selectRecommend)
@@ -18,24 +18,8 @@ const Recommends = (props) => {
                         </Wrap>
                     ))
                 }
-                {/* 
-                <Wrap>
-                    <Link to='/'>
-                        <img src="" alt="" />
-                    </Link>
-                </Wrap>
-                <Wrap>
-                    <Link to='/'>
-                        <img src="" alt="" />
-                    </Link>
-                </Wrap>
-                <Wrap>
-                    <Link to='/'>
-                        <img src="" alt="" />
-                    </Link>
-                </Wrap> */}
             </Content>
-        </Container >
+        </Container>
     )
 }
 
