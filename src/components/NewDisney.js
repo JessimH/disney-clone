@@ -1,10 +1,10 @@
 import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
-const Recommends = (props) => {
+const NewDisney = (props) => {
     return (
         <Container>
-            <h3>Recommended for you</h3>
+            <h3>New to Disney +</h3>
             <Content>
                 <Wrap>
                     <Link to='/'>
@@ -55,7 +55,7 @@ const Wrap = styled.div`
     position: relative;
     transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
     border: 3px solid rgba(249, 249, 249, 0.1);
-
+    
     img {
         inset: 0px;
         display: block;
@@ -77,4 +77,4 @@ const Wrap = styled.div`
     }
 `;
 
-export default Recommends;
+export default NewDisney;
