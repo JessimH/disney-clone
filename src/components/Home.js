@@ -16,9 +16,9 @@ const Home = (props) => {
     const dispatch = useDispatch()
     const userName = useSelector(selectUserName)
     let recommends = []
-    let newDisney = []
+    let newDisneys = []
     let originals = []
-    let trending = []
+    let trendings = []
 
     useEffect(() => {
         db.collection('movies').onSnapshot((snapchot) => {
@@ -31,7 +31,7 @@ const Home = (props) => {
                         })
                         break
                     case 'new':
-                        newDisney.push({
+                        newDisneys.push({
                             id: doc.id,
                             ...doc.data()
                         })
@@ -43,7 +43,7 @@ const Home = (props) => {
                         })
                         break
                     case 'trending':
-                        trending.push({
+                        trendings.push({
                             id: doc.id,
                             ...doc.data()
                         })
@@ -51,7 +51,16 @@ const Home = (props) => {
                 }
             })
         })
-    })
+
+        dispatch(
+            setMovies({
+                recommend: recommends,
+                newDisney: newDisneys,
+                original: originals,
+                trending: trendings
+            })
+        )
+    }, [userName])
 
 }
 
