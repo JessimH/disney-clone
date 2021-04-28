@@ -41,16 +41,16 @@ const Home = (props) => {
                         break
                 }
             })
-        })
 
-        dispatch(
-            setMovies({
-                recommend: recommends,
-                newDisney: newDisneys,
-                original: originals,
-                trending: trendings
-            })
-        )
+            dispatch(
+                setMovies({
+                    recommend: recommends,
+                    newDisney: newDisneys,
+                    original: originals,
+                    trending: trendings
+                })
+            )
+        })
     }, [userName])
 
     return (
@@ -64,6 +64,7 @@ const Home = (props) => {
         </Container>
     )
 }
+
 
 const Container = styled.main`
     position: relative;
